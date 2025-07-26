@@ -61,13 +61,16 @@ then
         if [ "$?" -eq 0  ];
         then
         	# IP level works ... let's do nothing right now
+		echo "WARNING - DNS does not work but $MYCHECK2 is reachable"
         	exit $EXITSTATUS
 	else
 		EXITSTATUS=$STATE_CRITICAL
+		echo "CRITICAL - checks on $MYCHECK1 but $MYCHECK2 failed"
 		exit $EXITSTATUS
         fi
 else
 	EXITSTATUS=$STATE_OK
+	echo "OK - Looks ok ($MYCHECK1 and $MYCHECK2 are reachable)"
 	exit $EXITSTATUS
 fi
 }
