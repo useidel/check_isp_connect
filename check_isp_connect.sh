@@ -10,6 +10,8 @@
 
 MYCHECK1=""
 MYCHECK2=""
+# One idea would be to use IPs of the famous DNS servers
+# here is an example for the Google ones
 #MYCHECK2=8.8.8.8
 #CHECK2=8.8.4.4
 
